@@ -106,8 +106,8 @@
                 }
 
                 const data = await response.json();
-                const sentences = data.answer.match(/[^\.!\?]+[\.!\?]+/g) || [];
-                const formattedResponse = '<ul>' + sentences.map(sentence => `<li>${sentence.trim()}</li>`).join('') + '</ul>';
+                const points = data.answer.split('\n').filter(point => point.trim() !== "").map(point => point.replace(/^-\s*/, ''));
+                const formattedResponse = '<ul>' + points.map(point => `<li>${point.trim()}</li>`).join('') + '</ul>';
                 responseElement.innerHTML = formattedResponse;
             } catch (error) {
                 responseElement.textContent = 'Error: ' + error.message;

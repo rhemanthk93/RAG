@@ -106,7 +106,7 @@ async def ask_question(question: Question):
         response = client.chat.completions.create(
             model="gpt-4",  # Use the GPT-4 model
             messages=[
-                {"role": "user", "content": f"{combined_prompt}"}
+                {"role": "user", "content": f"{combined_prompt}, please ensure response is in point form"}
             ],
         )
 
