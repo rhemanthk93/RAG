@@ -10,18 +10,6 @@ The RAG (Retrieval-Augmented Generation) Pipeline Project is a web application d
 - **Question Answering**: Retrieve relevant document texts based on user queries and generate answers using OpenAI's GPT-4 model.
 - **Interactive UI**: User-friendly frontend to submit questions and display answers with a loading animation.
 
-## Project Structure
-
-rag-pipeline/
-│
-├── documents/               # Directory containing PDF documents
-├── main.py                  # Backend code (FastAPI application)
-├── index.html               # Frontend code (HTML file)
-├── open_ai_test.py        # OpenAI testing sample code
-├── requirements.txt         # List of required Python packages
-└── README.md                # Project README file
-
-
 ## Requirements
 
 To run this project, you will need the following software and dependencies:
@@ -70,6 +58,45 @@ To run this project, you will need the following software and dependencies:
 
 ## Endpoints
 
+### `GET /`
+- **Description**: Root endpoint to check if the server is running.
+- **Response**: 
+  ```json
+  {
+    "message": "Welcome to the RAG Pipeline Backend"
+  }
+
+### `GET /documents`
+- **Description**: Fetches all stored documents..
+- **Response**: 
+  ```json
+  [
+    {
+      "chunk": "Text from document...",
+      "metadata": {
+        "filename": "document1.pdf"
+      }
+    },
+    {
+      "chunk": "Text from another document...",
+      "metadata": {
+        "filename": "document2.pdf"
+      }
+    }
+  ]
+
+### `POST /ask`
+- **Description**: Accepts a question and returns an answer generated using GPT-4.
+- **Request Body**: 
+  ```json
+  {
+    "question": "Enter your question here"
+  }
+- **Response**: 
+  ```json
+  {
+    "answer": "Generated answer based on the documents and question."
+  }
 
 ## Potential Questions
 
