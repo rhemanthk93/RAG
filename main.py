@@ -7,8 +7,8 @@ from vectordb import Memory
 import fitz  # PyMuPDF
 from openai import OpenAI
 
-# Define the OpenAI API key as a constant
-OPENAI_API_KEY = ""  # Replace with your actual API key
+# Read the OpenAI API key from the environment variable
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
