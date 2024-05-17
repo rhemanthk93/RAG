@@ -30,19 +30,24 @@ To run this project, you will need the following software and dependencies:
 ## Installation
 
 1. **Clone the Repository**:
-
+   
    ```sh
    git clone https://github.com/rhemanthk93/RAG.git
    cd rag
    
 2. **Install Dependencies**:
-  
-  ```sh
+   ```sh
    pip install -r requirements.txt
 
 3. **Download SpaCy Language Model**:
-
    ```sh
    python -m spacy download en_core_web_sm
 
-4. **
+4. **Set the OpenAI API Key**:
+   ***Windows***
+   ```sh
+   set OPENAI_API_KEY=your_openai_api_key
+  ***Max/Linux***
+  ```sh
+  export OPENAI_API_KEY=your_openai_api_key
+
