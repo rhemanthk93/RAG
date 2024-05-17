@@ -36,9 +36,13 @@ To run this project, you will need the following software and dependencies:
    cd rag
    
 2. **Install Dependencies**:
+  
+  ```sh
    pip install -r requirements.txt
 
 3. **Download SpaCy Language Model**:
+
+   ```sh
    python -m spacy download en_core_web_sm
 
 4. **
