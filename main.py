@@ -106,7 +106,7 @@ async def ask_question(question: Question):
         response = client.chat.completions.create(
             model="gpt-4",  # Use the GPT-4 model
             messages=[
-                {"role": "user", "content": f"{question.question}"}
+                {"role": "user", "content": f"{combined_prompt}"}
             ],
             max_tokens=50
         )
@@ -122,5 +122,4 @@ async def ask_question(question: Question):
 
 if __name__ == "__main__":
     import uvicorn
-
     uvicorn.run(app, host="0.0.0.0", port=8000)
