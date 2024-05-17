@@ -108,7 +108,6 @@ async def ask_question(question: Question):
             messages=[
                 {"role": "user", "content": f"{combined_prompt}"}
             ],
-            max_tokens=50
         )
 
         # Extract and print specific details
