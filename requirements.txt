@@ -1,7 +1,8 @@
 fastapi
 uvicorn
+pydantic
+python-multipart
 vectordb2
+openai
 pymupdf
 spacy
-openai
-fastapi[all]
