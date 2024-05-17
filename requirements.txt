@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+vectordb2
+pymupdf
+spacy
+openai
+fastapi[all]
