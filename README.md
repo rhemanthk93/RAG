@@ -20,11 +20,9 @@ To run this project, you will need the following software and dependencies:
   - `fastapi`: For building the API
   - `uvicorn`: For running the ASGI server
   - `pydantic`: For data validation and settings management
-  - `python-multipart`: For handling form data (optional, but often used with FastAPI)
   - `vectordb2`: For managing and searching document contents
   - `openai`: For interacting with the OpenAI API
   - `pymupdf`: For extracting text from PDF files
-  - `spacy`: For natural language processing tasks
 - **Web Browser**: For accessing the frontend interface
 
 ## Installation
